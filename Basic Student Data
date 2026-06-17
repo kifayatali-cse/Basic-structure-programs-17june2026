@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+struct Student {
+    int roll_number;
+    char name[100];
+    char department[50];
+    float gpa;
+    int age;
+};
+
+int main() {
+    struct Student student1;
+
+    student1.roll_number = 60;
+    snprintf(student1.name, sizeof(student1.name), "Kifayat Ali");
+    snprintf(student1.department, sizeof(student1.department), "Computer Science");
+    student1.gpa = 3.85;
+    student1.age = 20;
+
+    printf("Roll Number: %d\n", student1.roll_number);
+    printf("Name: %s\n", student1.name);
+    printf("Department: %s\n", student1.department);
+    printf("GPA: %.2f\n", student1.gpa);
+    printf("Age: %d\n", student1.age);
+
+    return 0;
+}
